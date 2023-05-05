@@ -19,14 +19,13 @@ const Wrapper = styled.div`
 
 const RightPostion = styled.div`
   position: absolute;
-  right: 5rem;
+  right: 4.5rem;
   display: flex;
   align-items: center;
 `
 
 const IconsStyled = {
   'width': '1rem',
-  'height': '1.3rem',
   'transform': 'translate(0px, 3px)',
 }
 

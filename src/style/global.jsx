@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const Flex = styled.div`
-  display: 'flex',
+  display: flex,
 `
 export const Container = styled.div`
   padding: 5rem;

@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext, useContext } from "react";
 import Nav from './components/Nav';
 import Header from './components/Header';
+import UserBlock from './components/UserBlock';
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from './style/theme';
 import { Container } from './style/global';
@@ -56,7 +57,10 @@ export default function App() {
         <Container>
           {
             datas.length !== 0 && (
-              <Header />
+              <>
+                <Header />
+                <UserBlock />
+              </>
             )
           }
         </Container>
