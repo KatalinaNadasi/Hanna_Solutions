@@ -1,0 +1,29 @@
+
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "ABI testing",
+      "country": "Belgium",
+      "city": "",
+      "contact": "Eline Grégoire",
+      "email": "eline@hanna-solutions.com",
+      "phone": "0494567789",
+      "secondary-contact": "ann",
+      "secondate-email": "",
+      "secondary-phone": ""
+    },
+    {
+      "id": 2,
+      "name": "Test",
+      "country": "France",
+      "city": "Paris",
+      "contact": "Zachary Durand",
+      "email": "zachary@hanna-solutions.com",
+      "phone": "0123456789",
+      "secondary-contact": "Pasquet",
+      "secondate-email": "",
+      "secondary-phone": ""
+    }
+  ]
+}
