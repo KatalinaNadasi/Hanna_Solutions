@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as Question } from "../images/question.svg";
+import { ReactComponent as Question } from "../assets/question.svg";
 
 
 const Select = styled.select`
@@ -7,6 +7,7 @@ const Select = styled.select`
   border: none;
   color: #fff;
   outline: none;
+  cursor: pointer;
 `
 
 const Option = styled.option`

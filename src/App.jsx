@@ -1,8 +1,14 @@
-import { useState, useEffect } from "react";
-import Nav from './components/Nav'
+import { useState, useEffect, createContext, useContext } from "react";
+import Nav from './components/Nav';
+import Header from './components/Header';
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from './style/theme';
+import { Container } from './style/global';
+import { GlobalState } from './store/globalState/context';
 
+
+
+export const useGlobalState = () => useContext(GlobalStateContext);
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -22,35 +28,39 @@ export const GlobalStyle = createGlobalStyle`
 
 export default function App() {
   const [datas, setDatas] = useState([]);
-
-  const getData = () => {
-  var requestOptions = {
-    method: "GET",
-    redirect: "follow",
-  };
-
-  fetch("http://localhost:3030/clients", requestOptions)
-    .then((response) => response.json())
-    .then((result) => setDatas(result))
-    .catch((error) => console.log("error", error));
-  };
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    getData();
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:3030/clients", requestOptions)
+      .then((response) => response.json())
+      .then((result) => setDatas(result))
+      .catch((error) => console.log("error", error));
+      setIsLoading(false)
+
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Nav />
-        {datas.map((data) => (
-          <div key={data.id}>
-            <h3>
-              <span>{data.id}</span> {data.name}
-            </h3>
-            <p>{data.contact}</p>
-          </div>
-        ))}
+      <GlobalState.Provider value={datas}>
+        <GlobalStyle />
+        <Nav />
+        <Container>
+          {
+            datas.length !== 0 && (
+              <Header />
+            )
+          }
+        </Container>
+      </GlobalState.Provider>
     </ThemeProvider>
   );
 }

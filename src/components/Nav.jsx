@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { Flex } from '../style/global';
-import logo from '../images/logo.jpg';
-import { ReactComponent as Question } from "../images/question.svg";
-import { ReactComponent as User } from "../images/user.svg";
+import logo from '../assets/logo.jpg';
+import { ReactComponent as Question } from "../assets/question.svg";
+import { ReactComponent as User } from "../assets/user.svg";
 import LangageSelector from './LangageSelector';
 
 
@@ -35,16 +35,6 @@ const IconWrapper = styled.div`
   margin: 0 2rem;
 `
 
-const IconQuestion = styled(Question)`
-  width: 3rem;
-  height: 2.5rem;
-`
-
-const IconUser = styled(User)`
-  width: 3rem;
-  height: 2.5rem;
-`
-
 const StyledRight = styled.li`
   flex: 1;
   display: inline-flex;
@@ -53,6 +43,12 @@ const StyledRight = styled.li`
   top: 2%;
   align-items: center;
 `
+
+const iconStyled = {
+  'width': '3rem',
+  'height': '2.5rem',
+  'cursor': 'pointer',
+}
 
 export default function Header() {
 
@@ -63,8 +59,8 @@ export default function Header() {
               <ImgStyled src={logo} alt='logo' />
               <StyledRight>
                 <IconWrapper>
-                  <IconQuestion alt='question' />
-                  <IconUser alt='user' />
+                  <Question alt='question' style={iconStyled} />
+                  <User alt='user' style={iconStyled} />
                 </IconWrapper>
                 <LangageSelector />
               </StyledRight>
