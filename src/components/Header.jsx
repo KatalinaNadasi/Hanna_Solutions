@@ -15,6 +15,10 @@ const Wrapper = styled.div`
   & > div {
     padding: 0 0.5rem 0 0;
   }
+
+  ${props => props.theme.mediaMax.xSmall`
+    display: block;
+  `};
 `
 
 const RightPostion = styled.div`
@@ -22,6 +26,11 @@ const RightPostion = styled.div`
   right: 4.5rem;
   display: flex;
   align-items: center;
+
+  ${props => props.theme.mediaMax.xSmall`
+    position: relative;
+    margin: 1rem 4rem;
+  `};
 `
 
 const IconsStyled = {

@@ -20,7 +20,7 @@ export default function LangageSelector() {
     return(
       <Select>
         <option value="en">EN</option>
-        <option value="be">BR</option>
+        <option value="be">BE</option>
         <option value="fr">FR</option>
       </Select>
   )

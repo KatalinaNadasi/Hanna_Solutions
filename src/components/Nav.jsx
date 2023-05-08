@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Flex } from '../style/global';
 import logo from '../assets/logo.jpg';
 import { ReactComponent as Question } from "../assets/question.svg";
 import { ReactComponent as User } from "../assets/user.svg";
@@ -18,7 +17,7 @@ const List = styled.ul`
   justify-content: center;
 `
 
-const Wrapper = styled(Flex) `
+const Wrapper = styled.div `
   position: 'fixed',
   top: '0',
   left: '0',

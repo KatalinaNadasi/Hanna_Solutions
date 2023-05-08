@@ -2,6 +2,7 @@ import { useState, useEffect, createContext, useContext } from "react";
 import Nav from './components/Nav';
 import Header from './components/Header';
 import UserBlock from './components/UserBlock';
+import FinancialBlock from './components/FinancialBlock';
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import theme from './style/theme';
 import { Container } from './style/global';
@@ -60,6 +61,7 @@ export default function App() {
               <>
                 <Header />
                 <UserBlock />
+                <FinancialBlock />
               </>
             )
           }

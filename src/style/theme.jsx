@@ -1,7 +1,11 @@
+import { css } from 'styled-components';
+
+// ----------------------
+// Media queries
+// ----------------------
 
 
 // https://www.styled-components.com/docs/advanced#media-templates
-// TODO Uses desktop, tablet, phone media queries / sizes?
 export const sizes = {
   xLarge: 1200,
   large: 1024,

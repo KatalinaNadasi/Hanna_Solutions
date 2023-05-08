@@ -11,7 +11,12 @@
       "phone": "0494567789",
       "secondary-contact": "ann",
       "secondary-email": "",
-      "secondary-phone": ""
+      "secondary-phone": "",
+      "financial": {
+        "name": "HON 1261",
+        "modified": "one month ago",
+        "created": "8 septembre 2022"
+      }
     },
     {
       "id": 2,
@@ -23,7 +28,12 @@
       "phone": "0123456789",
       "secondary-contact": "Pasquet",
       "secondate-email": "",
-      "secondary-phone": ""
+      "secondary-phone": "",
+      "financial": {
+        "name": "ADE 1111",
+        "modified": "2 days",
+        "created": "02 décembre 2018"  
+      }
     }
   ]
 }

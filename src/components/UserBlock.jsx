@@ -13,6 +13,10 @@ const Wrapper = styled.div `
   border-radius: 3px;
   padding: 1rem;
   position: relative;
+
+  ${props => props.theme.mediaMax.small`
+    display: block;
+  `};
 `
 
 const Col = styled.div`
